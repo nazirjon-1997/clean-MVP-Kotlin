@@ -1,6 +1,7 @@
 # clean-MVP-Kotlin
 
-Kotlin
-MVP
-RxJava
+Kotlin,
+MVP,
+Koin,
+RxJava,
 Room
