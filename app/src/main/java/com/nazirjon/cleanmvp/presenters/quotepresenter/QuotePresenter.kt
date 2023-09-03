@@ -11,7 +11,6 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class QuotePresenter(private val iQuoteInteractor: IQuoteInteractor) : IQuotePresenter, ViewModel() {
-
     private val allQuotes : MutableLiveData<List<Quote>> = MutableLiveData()
 
     init {

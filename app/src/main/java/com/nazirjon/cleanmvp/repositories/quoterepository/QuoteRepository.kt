@@ -9,9 +9,7 @@ import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
-class QuoteRepository(private val quoteDao: QuoteDao) :
-    IQuoteRepository {
-
+class QuoteRepository(private val quoteDao: QuoteDao) : IQuoteRepository {
     @SuppressLint("CheckResult")
     override fun insert(quote: Quote) {
         quoteDao.insert(quote)

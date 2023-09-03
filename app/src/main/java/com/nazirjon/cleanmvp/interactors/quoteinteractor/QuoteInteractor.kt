@@ -5,9 +5,7 @@ import com.nazirjon.cleanmvp.domain.entities.Quote
 import com.nazirjon.cleanmvp.repositories.quoterepository.IQuoteRepository
 import io.reactivex.Observable
 
-class QuoteInteractor(private val iQuoteRepository: IQuoteRepository) :
-    IQuoteInteractor {
-
+class QuoteInteractor(private val iQuoteRepository: IQuoteRepository) : IQuoteInteractor {
     override fun insert(quote: Quote) {
         iQuoteRepository.insert(quote)
     }

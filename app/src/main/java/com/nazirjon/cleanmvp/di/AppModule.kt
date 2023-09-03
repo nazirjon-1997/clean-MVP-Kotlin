@@ -7,26 +7,17 @@ import com.nazirjon.cleanmvp.presenters.quotepresenter.QuotePresenter
 import com.nazirjon.cleanmvp.repositories.databases.AppDatabase
 import com.nazirjon.cleanmvp.repositories.quoterepository.IQuoteRepository
 import com.nazirjon.cleanmvp.repositories.quoterepository.QuoteRepository
-import org.koin.androidx.viewmodel.ext.koin.viewModel
-import org.koin.dsl.module.module
+import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.dsl.module
 
 val appModule = module {
-
     single { Room.databaseBuilder(get(), AppDatabase::class.java, "quotes_database").build() }
 
     single { get<AppDatabase>().quoteDao() }
 
-    single<IQuoteRepository> {
-        QuoteRepository(
-            get()
-        )
-    }
+    single<IQuoteRepository> { QuoteRepository(get()) }
 
-    single<IQuoteInteractor> {
-        QuoteInteractor(
-            get()
-        )
-    }
+    single<IQuoteInteractor> { QuoteInteractor(get()) }
 
     viewModel { QuotePresenter(get()) }
 }

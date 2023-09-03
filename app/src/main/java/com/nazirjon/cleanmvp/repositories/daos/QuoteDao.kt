@@ -7,7 +7,6 @@ import io.reactivex.Observable
 
 @Dao
 interface QuoteDao {
-
     @Insert
     fun insert(quote: Quote) : Completable
 

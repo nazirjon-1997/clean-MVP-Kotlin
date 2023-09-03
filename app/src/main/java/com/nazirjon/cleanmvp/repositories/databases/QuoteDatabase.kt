@@ -7,6 +7,5 @@ import com.nazirjon.cleanmvp.repositories.daos.QuoteDao
 
 @Database(entities = [Quote::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-
     abstract fun quoteDao() : QuoteDao
 }

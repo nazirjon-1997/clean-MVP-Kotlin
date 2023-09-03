@@ -4,7 +4,6 @@ import com.nazirjon.cleanmvp.domain.entities.Quote
 import io.reactivex.Observable
 
 interface IQuoteRepository {
-
     fun insert(quote: Quote)
 
     fun update(quote: Quote)
